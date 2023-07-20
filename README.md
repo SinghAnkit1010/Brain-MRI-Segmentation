@@ -26,14 +26,35 @@ The architecture of model is depicted in figure below:
 
 **Training**
 
-The U-Net model is trained using the Dice loss function, which is commonly used for semantic segmentation tasks. The training is performed using the AdamW optimizer with a learning rate of 0.0001. Data augmentation techniques such as random flip, rotation, and zoom are applied to increase the variability of the training data and improve the model's generalization.
+The U-Net model is trained using the Dice loss function, which is commonly used for semantic segmentation tasks. The training is performed using the AdamW optimizer with a learning rate of 0.0001. Data augmentation techniques such as random flip, rotation, and zoom are applied to increase the variability of the training data and improve the model's generalization.Model was trained on 1300 images and we got following results during training after training for 30 epochs.
+
+![download (3)](https://github.com/SinghAnkit1010/Image-Segmentation-using-UNet/assets/103994994/30bd4d21-bcb4-4cc8-a420-07099e215089)
+
+![download (4)](https://github.com/SinghAnkit1010/Image-Segmentation-using-UNet/assets/103994994/2c7da1d5-fddd-4ea0-8a76-f77eb4cc6e29)
+
+
 
 
 **Evaluation**
 
-The trained model is evaluated on a separate test set using various metrics such as accuracy, recall, Intersection over Union (IoU), and Dice coefficient. These metrics help assess the model's performance and effectiveness in segmenting brain tumor regions.
+The trained model is evaluated on a separate test set using various metrics such as accuracy, recall, Intersection over Union (IoU), and Dice coefficient. These metrics help assess the model's performance and effectiveness in segmenting brain tumor regions.we get following results on test data:
 
-Results
+| Metric              | Value       |
+|---------------------|-------------|
+| IOU Coefficient     | 0.3043712   |
+| Recall              | 0.3362936   |
+| Dice Coefficient    | 0.46662897  |
+
+
+After this we visualize sum of the results ,The figures given below actual mask vs predicted mask on test data:
+![download](https://github.com/SinghAnkit1010/Image-Segmentation-using-UNet/assets/103994994/b1f48ed9-8f28-42aa-9ca7-2c28fa7fb13c)
+
+![download (1)](https://github.com/SinghAnkit1010/Image-Segmentation-using-UNet/assets/103994994/4731d8d3-f6e4-4d2f-99e2-f293ab455e1d)
+
+
+
+
+**Results**
 The results of the model's performance and segmentation outputs on the test set will be provided in the notebook along with visualizations for further analysis.
 
 Acknowledgments
